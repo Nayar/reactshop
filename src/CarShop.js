@@ -50,6 +50,7 @@ class CarShop extends React.Component {
         return <>
             <h1>Welcome to our Car Shop</h1>
             <h2>We are currently showing "{this.state.filter}" cars</h2>
+            <input type="text" value={this.state.filter}></input>
             <ul>
                 <li>Ford ford torino 1970-01-01</li>
                 <li>peugeot peugeot 504 (sw) 1972-01-01</li>
