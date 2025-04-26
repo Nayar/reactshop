@@ -14,12 +14,14 @@ function App() {
           <li><Link to="/">Home</Link></li>
           <li><Link to="/about">About</Link></li>
           <li><Link to="/projects">Projects</Link></li>
+          <li><Link to="/carshop">Car shop</Link></li>
         </ul>
       </nav>
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/about" element={<About />}></Route>
         <Route path="/projects" element={<MyProjects/>}></Route>
+        <Route path="/carshop" element={<CarShop/>}></Route>
       </Routes>
       {/* <CarShop></CarShop> */}
     </>
