@@ -56,6 +56,9 @@ class CarShop extends React.Component {
                 <li>peugeot peugeot 504 (sw) 1972-01-01</li>
                 <li>renault renault 12 (sw) 1972-01-01</li>
                 <li>...</li>
+                { listCars.map(function(car) {
+                    return <li key={car.id}>{car.id} {car.brand} {car.name} {car.year} {car.origin}</li>
+                }) }
             </ul>
         </>
     }
