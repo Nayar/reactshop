@@ -1,4 +1,6 @@
 import React from "react"
+import Header from "./Header"
+import Body from "./Body"
 
 const listCars = [
 {
@@ -54,14 +56,8 @@ class CarShop extends React.Component {
 
     render() {
         return <>
-            <h1>Welcome to our Car Shop</h1>
-            <h2>We are currently showing "{this.state.filter}" cars</h2>
-            <input type="text" onChange={this.updatefilter}></input>
-            <ul>
-                { listCars
-                .filter(car => car.brand.includes(this.state.filter))
-                .map(car => <li key={car.id}>{car.id} {car.brand} {car.name} {car.year} {car.origin}</li>) }
-            </ul>
+            <Header></Header>
+            <Body></Body>
         </>
     }
 }
