@@ -44,7 +44,7 @@ class CarShop extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            filter: "chev"
+            filter: "ford"
         }
     }
 
@@ -56,8 +56,10 @@ class CarShop extends React.Component {
 
     render() {
         return <>
-            <Header></Header>
-            <Body></Body>
+            {/* <Header></Header> */}
+            <Body listCars={listCars}
+            filter={this.state.filter}
+            />
         </>
     }
 }
