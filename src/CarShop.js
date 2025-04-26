@@ -52,13 +52,7 @@ class CarShop extends React.Component {
             <h2>We are currently showing "{this.state.filter}" cars</h2>
             <input type="text" value={this.state.filter}></input>
             <ul>
-                <li>Ford ford torino 1970-01-01</li>
-                <li>peugeot peugeot 504 (sw) 1972-01-01</li>
-                <li>renault renault 12 (sw) 1972-01-01</li>
-                <li>...</li>
-                { listCars.map(function(car) {
-                    return <li key={car.id}>{car.id} {car.brand} {car.name} {car.year} {car.origin}</li>
-                }) }
+                { listCars.map(car => <li key={car.id}>{car.id} {car.brand} {car.name} {car.year} {car.origin}</li>) }
             </ul>
         </>
     }
