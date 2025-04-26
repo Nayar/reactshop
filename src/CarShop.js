@@ -48,7 +48,7 @@ class CarShop extends React.Component {
 
     updatefilter = (event) => {
         this.setState({
-            filter: "peugeot"
+            filter: event.target.value
         })
     }
 
