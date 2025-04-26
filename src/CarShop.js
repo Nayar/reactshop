@@ -42,7 +42,7 @@ class CarShop extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            filter: "peugeot"
+            filter: "chev"
         }
     }
 
@@ -53,7 +53,7 @@ class CarShop extends React.Component {
             <input type="text" value={this.state.filter}></input>
             <ul>
                 { listCars
-                .filter(car => car.brand.includes("e"))
+                .filter(car => car.brand.includes(this.state.filter))
                 .map(car => <li key={car.id}>{car.id} {car.brand} {car.name} {car.year} {car.origin}</li>) }
             </ul>
         </>
