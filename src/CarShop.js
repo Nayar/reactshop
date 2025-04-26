@@ -56,10 +56,8 @@ class CarShop extends React.Component {
 
     render() {
         return <>
-            {/* <Header></Header> */}
-            <Body listCars={listCars}
-            filter={this.state.filter}
-            />
+            <Header filter={this.state.filter} updatefilter={this.updatefilter}/>
+            <Body listCars={listCars} filter={this.state.filter}/>
         </>
     }
 }
