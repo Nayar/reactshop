@@ -46,11 +46,17 @@ class CarShop extends React.Component {
         }
     }
 
+    updatefilter = (event) => {
+        this.setState({
+            filter: "peugeot"
+        })
+    }
+
     render() {
         return <>
             <h1>Welcome to our Car Shop</h1>
             <h2>We are currently showing "{this.state.filter}" cars</h2>
-            <input type="text" value={this.state.filter}></input>
+            <input type="text" onChange={this.updatefilter}></input>
             <ul>
                 { listCars
                 .filter(car => car.brand.includes(this.state.filter))
