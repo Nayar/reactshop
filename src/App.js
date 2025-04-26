@@ -4,7 +4,7 @@ import CarShop from './CarShop';
 import Home from './Home';
 import About from './About';
 import MyProjects from './Projects';
-import { Route, Link } from "react-router-dom";
+import { Route, Link, Routes } from "react-router-dom";
 
 function App() {
   return (
@@ -16,9 +16,11 @@ function App() {
           <li><Link to="/projects">Projects</Link></li>
         </ul>
       </nav>
-      <Home></Home>
-      <About></About>
-      <MyProjects/>
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/about" element={<About />}></Route>
+        <Route path="/projects" element={<MyProjects/>}></Route>
+      </Routes>
       {/* <CarShop></CarShop> */}
     </>
   );
